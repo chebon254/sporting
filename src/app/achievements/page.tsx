@@ -40,75 +40,7 @@ export default function AchievementsPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16 lg:h-20">
-            <Link href="/" className="flex items-center space-x-2">
-              <div className="bg-gradient-to-br from-blue-900 to-blue-700 p-2 rounded-lg">
-                <Dumbbell className="h-6 w-6 text-white" />
-              </div>
-              <span className="text-xl lg:text-2xl font-bold text-gray-900">
-                Town Hall Athletics
-              </span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-8">
-              <Link href="/" className="text-gray-700 hover:text-blue-900 transition-colors font-medium">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-900 transition-colors font-medium">
-                About
-              </Link>
-              <Link href="/achievements" className="text-blue-900 font-semibold">
-                Achievements
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-900 transition-colors font-medium">
-                Contact
-              </Link>
-              <Button className="bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-800 hover:to-blue-600">
-                Get Started
-              </Button>
-            </div>
-
-            {/* Mobile menu button */}
-            <button 
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-md text-gray-700 hover:text-blue-900 hover:bg-gray-100 transition-colors"
-            >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </button>
-          </div>
-
-          {/* Mobile Navigation */}
-          {isMenuOpen && (
-            <div className="lg:hidden bg-white/95 backdrop-blur-md border-t border-gray-200">
-              <div className="px-2 pt-2 pb-3 space-y-1">
-                <Link href="/" className="block px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors font-medium">
-                  Home
-                </Link>
-                <Link href="/about" className="block px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors font-medium">
-                  About
-                </Link>
-                <Link href="/achievements" className="block px-3 py-2 text-blue-900 bg-blue-50 rounded-md font-semibold">
-                  Achievements
-                </Link>
-                <Link href="/contact" className="block px-3 py-2 text-gray-700 hover:text-blue-900 hover:bg-gray-50 rounded-md transition-colors font-medium">
-                  Contact
-                </Link>
-                <div className="px-3 py-2">
-                  <Button className="w-full bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-800 hover:to-blue-600">
-                    Get Started
-                  </Button>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
+      
 
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
@@ -613,68 +545,6 @@ export default function AchievementsPage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <Link href="/" className="flex items-center space-x-2 mb-4">
-                <div className="bg-gradient-to-br from-orange-500 to-orange-600 p-2 rounded-lg">
-                  <Dumbbell className="h-6 w-6 text-white" />
-                </div>
-                <span className="text-xl font-bold">Town Hall Athletics</span>
-              </Link>
-              <p className="text-gray-400 leading-relaxed">
-                Non-profit athletic training facility dedicated to developing champions through world-class coaching and community-focused programs.
-              </p>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Programs</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-white transition-colors">Strength Training</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Speed & Agility</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Conditioning</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Sport-Specific</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Team Training</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2 text-gray-400">
-                <li><Link href="/about" className="hover:text-white transition-colors">About Us</Link></li>
-                <li><Link href="/achievements" className="hover:text-white transition-colors">Achievements</Link></li>
-                <li><Link href="/contact" className="hover:text-white transition-colors">Contact</Link></li>
-                <li><a href="#" className="hover:text-white transition-colors">Donate</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Volunteer</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Connect</h4>
-              <div className="space-y-2 text-gray-400">
-                <div className="flex items-center space-x-2">
-                  <Phone className="h-4 w-4" />
-                  <span>(555) 123-ATHLETIC</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Mail className="h-4 w-4" />
-                  <span>info@townhallathletics.com</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <MapPin className="h-4 w-4" />
-                  <span>Champions City, CA</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Town Hall Athletics. All rights reserved. A non-profit organization dedicated to athletic excellence.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
