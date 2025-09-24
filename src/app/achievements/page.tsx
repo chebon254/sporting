@@ -1,42 +1,24 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Menu, 
-  X, 
-  ChevronRight, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  ChevronRight,
   Star,
-  Dumbbell,
-  Users,
   Trophy,
-  Heart,
   Target,
-  Zap,
   Award,
-  Calendar,
   Medal,
   Crown,
   TrendingUp,
   Globe
 } from "lucide-react";
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AchievementsPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -45,10 +27,13 @@ export default function AchievementsPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img 
+          <Image
             src="https://images.pexels.com/photos/1552103/pexels-photo-1552103.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
             alt="Athletic achievements"
             className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-900/60 to-blue-800/70"></div>
         </div>
@@ -130,7 +115,7 @@ export default function AchievementsPage() {
               FEATURED ATHLETES
             </Badge>
             <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Champions We've Developed
+              Champions We&apos;ve Developed
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Meet some of the extraordinary athletes who have trained with us and achieved greatness on the world stage.
@@ -141,10 +126,12 @@ export default function AchievementsPage() {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
                     alt="Sarah Johnson"
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
                   />
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-yellow-500 text-white border-none">
@@ -175,10 +162,12 @@ export default function AchievementsPage() {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
                     alt="Mike Rodriguez"
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
                   />
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-blue-600 text-white border-none">
@@ -209,10 +198,12 @@ export default function AchievementsPage() {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
                     alt="James Wilson"
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
                   />
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-green-600 text-white border-none">
@@ -243,10 +234,12 @@ export default function AchievementsPage() {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
                     alt="Emma Chen"
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
                   />
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-purple-600 text-white border-none">
@@ -277,10 +270,12 @@ export default function AchievementsPage() {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
                     alt="David Martinez"
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
                   />
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-red-600 text-white border-none">
@@ -311,10 +306,12 @@ export default function AchievementsPage() {
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400&h=300&fit=crop"
                     alt="Lisa Thompson"
                     className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    width={400}
+                    height={300}
                   />
                   <div className="absolute top-4 right-4">
                     <Badge className="bg-indigo-600 text-white border-none">

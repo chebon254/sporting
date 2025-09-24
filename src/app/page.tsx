@@ -1,18 +1,14 @@
 "use client";
-
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Menu, 
-  X, 
-  ChevronRight, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
+import {
+  ChevronRight,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
   Star,
   Dumbbell,
   Users,
@@ -23,18 +19,8 @@ import {
 } from "lucide-react";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
   };
 
   return (
@@ -43,10 +29,12 @@ export default function Home() {
       {/* Hero Section */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img 
+          <Image
             src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
             alt="Athletic training facility"
             className="w-full h-full object-cover"
+            fill
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-900/60 to-blue-800/70"></div>
         </div>
@@ -139,10 +127,12 @@ export default function Home() {
 
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <Image
                   src="https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Modern gym interior"
                   className="w-full h-[500px] object-cover"
+                  width={800}
+                  height={500}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
@@ -236,7 +226,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-4">Conditioning</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Build elite-level endurance and cardiovascular fitness tailored to your sport's demands.
+                  Build elite-level endurance and cardiovascular fitness tailored to your sport&apos;s demands.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-center">
@@ -360,13 +350,15 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic leading-relaxed">
-                  "The training at Town Hall Athletics completely transformed my game. The personalized approach and expert coaching helped me reach the next level in my sport."
+                  &ldquo;The training at Town Hall Athletics completely transformed my game. The personalized approach and expert coaching helped me reach the next level in my sport.&rdquo;
                 </p>
                 <div className="flex items-center">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
                     alt="Sarah Johnson"
                     className="w-12 h-12 rounded-full object-cover mr-4"
+                    width={48}
+                    height={48}
                   />
                   <div>
                     <div className="font-semibold text-gray-900">Sarah Johnson</div>
@@ -384,13 +376,15 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic leading-relaxed">
-                  "The facility is world-class and the coaches are incredibly knowledgeable. I've seen massive improvements in my strength and conditioning since joining."
+                  &ldquo;The facility is world-class and the coaches are incredibly knowledgeable. I&apos;ve seen massive improvements in my strength and conditioning since joining.&rdquo;
                 </p>
                 <div className="flex items-center">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
                     alt="Mike Rodriguez"
                     className="w-12 h-12 rounded-full object-cover mr-4"
+                    width={48}
+                    height={48}
                   />
                   <div>
                     <div className="font-semibold text-gray-900">Mike Rodriguez</div>
@@ -408,13 +402,15 @@ export default function Home() {
                   ))}
                 </div>
                 <p className="text-gray-700 mb-6 italic leading-relaxed">
-                  "Town Hall Athletics helped me achieve my dream of playing Division I football. The comprehensive training program made all the difference."
+                  &ldquo;Town Hall Athletics helped me achieve my dream of playing Division I football. The comprehensive training program made all the difference.&rdquo;
                 </p>
                 <div className="flex items-center">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop"
                     alt="James Wilson"
                     className="w-12 h-12 rounded-full object-cover mr-4"
+                    width={48}
+                    height={48}
                   />
                   <div>
                     <div className="font-semibold text-gray-900">James Wilson</div>
@@ -506,10 +502,12 @@ export default function Home() {
             <div className="relative">
               <Card className="border-0 shadow-2xl overflow-hidden">
                 <CardContent className="p-0">
-                  <img 
+                  <Image
                     src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
                     alt="Athletic training session"
                     className="w-full h-[400px] object-cover"
+                    width={600}
+                    height={400}
                   />
                   <div className="p-8">
                     <h3 className="text-xl font-bold text-gray-900 mb-4">Join the Elite</h3>

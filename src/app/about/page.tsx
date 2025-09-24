@@ -1,19 +1,11 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Menu, 
-  X, 
-  ChevronRight, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Star,
-  Dumbbell,
+import {
+  ChevronRight,
   Users,
   Trophy,
   Heart,
@@ -24,21 +16,9 @@ import {
   CheckCircle
 } from "lucide-react";
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function AboutPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  const scrollToSection = (sectionId: string) => {
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    setIsMenuOpen(false);
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -46,10 +26,13 @@ export default function AboutPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img 
+          <Image
             src="https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
             alt="Athletic training facility"
             className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-900/60 to-blue-800/70"></div>
         </div>
@@ -123,10 +106,12 @@ export default function AboutPage() {
 
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <Image
                   src="https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Community training session"
                   className="w-full h-[500px] object-cover"
+                  width={800}
+                  height={600}
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs">
@@ -264,10 +249,12 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="lg:order-1">
-                <img 
+                <Image
                   src="https://images.pexels.com/photos/1552106/pexels-photo-1552106.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
                   alt="Early training facility"
                   className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  width={600}
+                  height={400}
                 />
               </div>
             </div>
@@ -284,10 +271,12 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <img 
+                <Image
                   src="https://images.pexels.com/photos/1552242/pexels-photo-1552242.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
                   alt="Expanded facility"
                   className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  width={600}
+                  height={400}
                 />
               </div>
             </div>
@@ -304,10 +293,12 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="lg:order-1">
-                <img 
+                <Image
                   src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
                   alt="Modern training methods"
                   className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  width={600}
+                  height={400}
                 />
               </div>
             </div>
@@ -324,10 +315,12 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <img 
+                <Image
                   src="https://images.pexels.com/photos/1431282/pexels-photo-1431282.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
                   alt="Current state-of-the-art facility"
                   className="w-full h-64 object-cover rounded-xl shadow-lg"
+                  width={600}
+                  height={400}
                 />
               </div>
             </div>
@@ -393,7 +386,7 @@ export default function AboutPage() {
             Ready to Join Our Community?
           </h2>
           <p className="text-xl text-gray-200 mb-10 max-w-3xl mx-auto">
-            Become part of a legacy that's dedicated to athletic excellence and community impact.
+            Become part of a legacy that&apos;s dedicated to athletic excellence and community impact.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

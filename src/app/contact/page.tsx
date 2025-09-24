@@ -1,35 +1,24 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+"use client";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Menu, 
-  X, 
-  ChevronRight, 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Clock, 
-  Dumbbell,
+import {
+  ChevronRight,
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
   Send,
   MessageSquare,
   Calendar,
   Users,
   Award
 } from "lucide-react";
-import Link from 'next/link';
+import Image from 'next/image';
 
 export default function ContactPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -38,10 +27,13 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden pt-20">
         <div className="absolute inset-0 z-0">
-          <img 
+          <Image
             src="https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
             alt="Contact us"
             className="w-full h-full object-cover"
+            width={1920}
+            height={1080}
+            priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 via-blue-900/60 to-blue-800/70"></div>
         </div>
@@ -74,10 +66,10 @@ export default function ContactPage() {
                 SEND MESSAGE
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Let's Start the Conversation
+                Let&apos;s Start the Conversation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Fill out the form below and we'll get back to you within 24 hours to discuss how we can help you achieve your athletic goals.
+                Fill out the form below and we&apos;ll get back to you within 24 hours to discuss how we can help you achieve your athletic goals.
               </p>
 
               <form className="space-y-6">
@@ -242,7 +234,7 @@ export default function ContactPage() {
               <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-orange-50 rounded-xl">
                 <h4 className="font-semibold text-gray-900 mb-3">Quick Response Guarantee</h4>
                 <p className="text-gray-600 text-sm">
-                  We understand that starting your athletic journey is important to you. That's why we guarantee a response to all inquiries within 24 hours during business days.
+                  We understand that starting your athletic journey is important to you. That&apos;s why we guarantee a response to all inquiries within 24 hours during business days.
                 </p>
               </div>
             </div>
@@ -301,7 +293,7 @@ export default function ContactPage() {
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">Do you work with all skill levels?</h4>
                     <p className="text-gray-600">
-                      Absolutely! As a non-profit organization, we're committed to serving athletes of all backgrounds and skill levels, from beginners to elite competitors.
+                      Absolutely! As a non-profit organization, we&apos;re committed to serving athletes of all backgrounds and skill levels, from beginners to elite competitors.
                     </p>
                   </div>
                 </div>
@@ -356,7 +348,7 @@ export default function ContactPage() {
                 <CardContent className="p-6">
                   <h4 className="font-semibold text-gray-900 mb-3">Directions</h4>
                   <p className="text-gray-600 text-sm mb-4">
-                    From Downtown: Take Highway 101 North, exit at Athletic Drive. We're located 2 blocks east on the right side.
+                    From Downtown: Take Highway 101 North, exit at Athletic Drive. We&apos;re located 2 blocks east on the right side.
                   </p>
                   <Button variant="outline" className="w-full">
                     Get Directions
