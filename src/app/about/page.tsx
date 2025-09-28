@@ -1,22 +1,10 @@
 "use client";
 
-"use client";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import {
-  ChevronRight,
-  Users,
-  Trophy,
-  Heart,
   Target,
-  Zap,
-  Award,
-  Calendar,
-  CheckCircle,
   Eye,
 } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function AboutPage() {
@@ -71,11 +59,12 @@ export default function AboutPage() {
             </div>
 
             <div className="relative animate-slide-in-right">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative h-[500px]">
+                <Image
                   src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Kenyan athletes running"
-                  className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -121,8 +110,8 @@ export default function AboutPage() {
                 </div>
                 <p className="text-white/90 leading-relaxed">
                   We want to witness our athletes achieving their dreams and
-                  goals through our organization's help in addition to their
-                  hard work and their family's support. Through our
+                  goals through our organization&apos;s help in addition to their
+                  hard work and their family&apos;s support. Through our
                   contribution, we hope to open more doors and paths they can
                   walk towards achieving more.
                 </p>

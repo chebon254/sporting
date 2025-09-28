@@ -1,36 +1,17 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import {
-  Menu,
-  X,
-  ChevronRight,
   MapPin,
   Phone,
   Mail,
-  Clock,
-  Dumbbell,
   Send,
-  MessageSquare,
-  Calendar,
-  Users,
-  Award,
 } from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
 
 export default function ContactPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -67,10 +48,10 @@ export default function ContactPage() {
                 SEND MESSAGE
               </Badge>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Let's Start the Conversation
+                Let&apos;s Start the Conversation
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Fill out the form below and we'll get back to you within 24
+                Fill out the form below and we&apos;ll get back to you within 24
                 hours to discuss how we can help you achieve your athletic
                 goals.
               </p>

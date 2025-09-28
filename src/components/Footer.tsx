@@ -1,11 +1,6 @@
 import Link from "next/link";
 import {
-  Facebook,
-  Twitter,
-  Instagram,
-  Youtube,
   Mail,
-  Phone,
   MapPin,
 } from "lucide-react";
 

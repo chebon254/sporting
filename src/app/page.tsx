@@ -1,43 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import {
-  Menu,
-  X,
-  ChevronRight,
-  MapPin,
-  Phone,
-  Mail,
-  Clock,
-  Star,
-  Users,
-  Trophy,
-  Heart,
-  Target,
-  Zap,
-  Facebook,
-  Twitter,
   ArrowRight,
-  Play,
 } from "lucide-react";
 
 export default function Home() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
-    setIsMenuOpen(false);
   };
 
   return (
@@ -45,10 +17,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
             alt="Kenyan athletes training"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
+            priority
           />
           <div className="absolute inset-0 bg-black/60"></div>
         </div>
@@ -107,11 +81,12 @@ export default function Home() {
             </div>
 
             <div className="relative animate-slide-in-right">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative h-[500px]">
+                <Image
                   src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Kenyan athletes running"
-                  className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -124,11 +99,12 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div className="relative animate-slide-in-left">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img
+              <div className="rounded-2xl overflow-hidden shadow-2xl relative h-[500px]">
+                <Image
                   src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop"
                   alt="Athletes training together"
-                  className="w-full h-[500px] object-cover hover:scale-105 transition-transform duration-700"
+                  fill
+                  className="object-cover hover:scale-105 transition-transform duration-700"
                 />
               </div>
             </div>
@@ -179,11 +155,12 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-white">
               <CardContent className="p-0">
-                <div className="relative overflow-hidden">
-                  <img
+                <div className="relative overflow-hidden h-64">
+                  <Image
                     src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop"
                     alt="Set an appointment"
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="p-8 text-center">
@@ -208,11 +185,12 @@ export default function Home() {
 
             <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 bg-white">
               <CardContent className="p-0">
-                <div className="relative overflow-hidden">
-                  <img
+                <div className="relative overflow-hidden h-64">
+                  <Image
                     src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop"
                     alt="Send referrals"
-                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-700"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
                   />
                 </div>
                 <div className="p-8 text-center">
@@ -240,10 +218,11 @@ export default function Home() {
       {/* Mission Statement Section */}
       <section className="py-20 lg:py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src="https://images.pexels.com/photos/2402777/pexels-photo-2402777.jpeg?auto=compress&cs=tinysrgb&w=1920&h=800&fit=crop"
             alt="Team of athletes"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/70"></div>
         </div>
