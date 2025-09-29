@@ -54,7 +54,7 @@ export default function AchievementsPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 p-0">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <Image
@@ -96,7 +96,7 @@ export default function AchievementsPage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 p-0">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <Image
@@ -138,7 +138,7 @@ export default function AchievementsPage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 p-0">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <Image
@@ -180,7 +180,7 @@ export default function AchievementsPage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 p-0">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <Image
@@ -222,7 +222,7 @@ export default function AchievementsPage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 p-0">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <Image
@@ -264,7 +264,7 @@ export default function AchievementsPage() {
               </CardContent>
             </Card>
 
-            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2">
+            <Card className="group hover:shadow-xl transition-all duration-300 border-0 shadow-lg hover:-translate-y-2 p-0">
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <Image
