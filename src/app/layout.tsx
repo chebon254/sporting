@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: 'Town Hall Athletics - Elite Athletic Training Facility',
+  title: 'Peak Elite Running - Elite Athletic Training Facility',
   description: 'Premier athletic training facility offering world-class coaching, strength training, conditioning, and sport-specific programs for serious athletes.',
 };
 

@@ -67,14 +67,14 @@ export default function Home() {
                 </span>
               </div>
               <h2 className="text-3xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Townhall Athletics Club
+                Peak Elite Running
               </h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                 We believe that by working together with our will and
                 compassion, we can help Kenyan athletes pursue their passion and
                 follow their dreams. Through our organization, we can provide
                 them with the resources, support, equipment, and facilities they
-                need for their training and competition. Townhall Athletics Club
+                need for their training and competition. Peak Elite Running
                 also helps athletes obtain their needed skills and discipline to
                 perform excellently.
               </p>

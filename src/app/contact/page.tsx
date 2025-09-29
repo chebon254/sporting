@@ -206,7 +206,7 @@ export default function ContactPage() {
                           Email Us
                         </h4>
                         <p className="text-gray-600 mb-2">
-                          info@townhallathletics.com
+                          info@peakeliterunning.com
                         </p>
                         <p className="text-sm text-gray-500">
                           We respond within 24 hours

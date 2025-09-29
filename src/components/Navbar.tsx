@@ -35,7 +35,7 @@ export default function Navbar() {
             <span className={`text-xl lg:text-2xl font-bold ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
-              Town Hall Athletics
+              Peak Elite Running
             </span>
           </Link>
 
