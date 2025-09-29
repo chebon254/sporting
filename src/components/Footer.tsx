@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
               <Link href="/" className="flex items-center space-x-3 mb-6">
-                <div className="text-white font-bold text-lg">TOWNHALL</div>
+                <div className="text-white font-bold text-lg">PEAK ELITE RUNNING</div>
               </Link>
               <p className="text-gray-400 leading-relaxed mb-4">
                 We believe that by working together with our will and
@@ -36,7 +36,7 @@ export default function Footer() {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="h-4 w-4" />
-                  <span>info@townhallathletics.com</span>
+                  <span>info@peakeliterun.com</span>
                 </div>
               </div>
             </div>
