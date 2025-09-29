@@ -57,15 +57,7 @@ export default function Footer() {
                     href="/achievements"
                     className="hover:text-white transition-colors"
                   >
-                    Athletes & Achievements
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/team"
-                    className="hover:text-white transition-colors"
-                  >
-                    Townhall Athletics Team
+                    Achievements
                   </Link>
                 </li>
                 <li>
